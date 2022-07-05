@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  scaffold:
+    profiles: ['scaffold']
+    build:
+      dockerfile: './docker/scaffold/Dockerfile'
+    container_name: scaffold
+    volumes:
+      - './mnt/:/home/node/app'
+  npm:
+    profiles: ['npm']
+    build:
+      dockerfile: ./docker/npm/Dockerfile
+    container_name: npm
+    volumes:
+      - './mnt:/home/node/app'
