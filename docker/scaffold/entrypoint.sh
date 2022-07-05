@@ -27,7 +27,6 @@ do
     echo
     echo "run:"
     echo "    \`docker compose run npm install\` to install dependencies"
-    echo "    \`docker compose run npm start -- --host\` to run the server"
     echo
     exit
   fi
